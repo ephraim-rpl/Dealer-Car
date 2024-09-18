@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Vought</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+            <nav>
+                <a href="index.html"><img src="logo.png" alt="logo"></a>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa-solid fa-x" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="#option">SERVICE</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>   
+                    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <img src="vought.png" alt="Logo of Vought" data-aos="zoom-in-down" data-aos-duration="1500">
+                <p>The largest car dealer company in the world offers a wide range of <br>high quality vehicles and services.</p>
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+    </section>
+
+<!--Service-->
+
+<section class="service" >
+    <h1 data-aos="fade-right" data-aos-duration="1000">Welcome To<br>Vought</h1>
+    <p data-aos="fade-right" data-aos-duration="800">At Vought, we understand that selling a used car can be a confusing and time-consuming process. Therefore, we have designed efficient sales procedures to ensure you have a fast and stress-free experience. From car appraisal to payment, we handle all aspects with professionalism and speed.</p>
+
+    <div class="right">
+        <img src="dealer.jpeg" data-aos="fade-left" data-aos-duration="1500">
+        <a href="about.html" class="service-btn">Company</a>
+    </div>
+    </div>
+</section>
+
+<!--Button services-->
+
+<section class="option-btn" id="option">
+    <h1 data-aos="fade-down" data-aos-duration="1800">Services Option</h1>
+    <p>Remember!, we only provide the best service you have ever experienced.</p>
+
+    <div class="row-button">
+        <div class="option-col" data-aos="fade-right" data-aos-duration="1000">
+            <img src="audi.jpeg" alt="Audi button">
+            <a href="sell.html" >
+            <div class="layer">
+                <h3>Sell</h3>
+            </div></a>
+        </div>
+
+        <div class="option-col" data-aos="fade-up" data-aos-duration="1000">
+            <img src="Porsche GT3 RS.jpeg" alt="Porsche button">
+
+            <a href="buy.html">
+            <div class="layer">
+                <h3>Buy</h3>
+            </div></a>
+        </div>
+
+        <div class="option-col" data-aos="fade-left" data-aos-duration="1000">
+            <img src="Revuelto.jpeg" alt="Revuelto button">
+
+            <a href="rent.html">
+            <div class="layer">
+                <h3>Rent</h3>
+            </div></a>
+        </div>
+    </div>
+</section>
+
+
+<!--Footer-->
+
+<section class="footer">
+    <h4>Vought</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores <br>laudantium aliquam sunt exercitationem officiis,</p>
+
+    <div class="icon">
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</section>
+
+
+
+<!--JavaScript for list menu-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-450px";
+    }
+</script>
+<script>
+function handleAOS() {
+    const elements = document.querySelectorAll('.option-col, .option-btn h1, .service h1, .service p, .right img');
+    
+    if (window.innerWidth <= 700) {
+        elements.forEach(el => {
+            el.removeAttribute('data-aos');
+            el.removeAttribute('data-aos-duration');
+        });
+    } else {
+        elements.forEach(el => {
+            el.setAttribute('data-aos', 'fade-right');
+            el.setAttribute('data-aos-duration', '1000');
+        });
+        AOS.init();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleAOS();
+});
+
+window.addEventListener('resize', function() {
+    handleAOS();
+});
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+  </script>
+
+
+
+</body>
+</html>
